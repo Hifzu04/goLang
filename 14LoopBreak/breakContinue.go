@@ -29,4 +29,26 @@ func main(){
 
 
 
+	//goto statement 
+
+	fmt.Println("start")
+	goto skip  // jump to the skip label 
+
+	//fmt.Println("this line will be skipped")
+
+	skip : fmt.Println("end")
+
+	var a int = 10 ; 
+
+	myloop : for a<20 {
+		if a==15 {
+			a+=1 
+			goto myloop
+		}
+		fmt.Printf("%d " , a)         //10 11 12 13 14 16 17 18 19  15 is missing
+		a++;
+	}
+ 
+
+
  }
