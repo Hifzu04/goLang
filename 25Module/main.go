@@ -12,10 +12,10 @@ func main() {
 	fmt.Println("Welcome to go module")
 	greeter()
 	r := mux.NewRouter()
-	r.HandleFunc("/", serveHome) 
+	r.HandleFunc("/", serveHome)
 
 	//http.ListenAndServe(":4000" ,r)
-	log.Fatal(http.ListenAndServe(":4000" ,r))
+	log.Fatal(http.ListenAndServe(":4000", r))
 }
 
 func greeter() {
@@ -23,5 +23,5 @@ func greeter() {
 }
 
 func serveHome(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("<h1>welecome to golang form respose by hifzur</h1>"))
+	w.Write([]byte("<h1>Hello from here </h1>"))
 }
