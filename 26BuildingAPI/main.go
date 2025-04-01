@@ -162,7 +162,7 @@ func main() {
 
 	//routing
 	r.HandleFunc("/", serveHome).Methods("GET")
-	r.HandleFunc("/saarecourse", getAllCourses).Methods("GET")
+	r.HandleFunc("/courses", getAllCourses).Methods("GET")
 	r.HandleFunc("/course/{id}", getOneCourse).Methods("GET")
 	//use POST when you want to create a new resource and PUT when you want to update or replace an existing resource.
 	r.HandleFunc("/course", addOneCourse).Methods("POST")
@@ -171,5 +171,5 @@ func main() {
 
 	//listener to a port
 
-	log.Fatal(http.ListenAndServe(":2000", r))
+	log.Fatal(http.ListenAndServe(":9000", r))
 }
